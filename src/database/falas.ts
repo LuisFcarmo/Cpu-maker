@@ -5,13 +5,11 @@ type falas = {
 
 const falas0:falas ={
     fala: 
-    `
-    Olá, seja bem vindo ao CPU-Maker.
+    `Olá, seja bem vindo ao CPU-Maker.
 
-    Meu intuito é te ajudar a escolher uma CPU que melhor se adapte às suas necessidades.Basta escolher as configurações desejadas e eu irei buscar a melhor opção de CPU no mercado de acordo com as suas prefências.
+    Meu intuito é te ajudar a escolher uma CPU que melhor se adapte às suas necessidades. Basta escolher as configurações desejadas e eu irei buscar a melhor opção de CPU no mercado de acordo com as suas prefências.
 
-    Vamos começar?
-    `,
+    Vamos começar?`,
     explicado: ""
 }  
 
@@ -36,7 +34,7 @@ const falas4:falas ={
 }  
 
 const falas5:falas ={
-    fala: "Verifique as respostas:\n **Consumo:** $\n **Desempenho:** $\n **Custo:** $\n **Aplicação:** $",
+    fala: "**Verifique as respostas:**\n **Consumo:** $\n **Desempenho:** $\n **Custo:** $\n **Aplicação:** $",
     explicado: "Preencha todos os campos para poder prosseguir."
 }  
 

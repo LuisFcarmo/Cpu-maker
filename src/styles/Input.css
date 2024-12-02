@@ -18,6 +18,7 @@
     height: auto;
     border: 3px solid #314037;
     text-align: center;
+    font-family: 'Nerko One',Arial, sans-serif;
   }
   
   .styled-input:hover,

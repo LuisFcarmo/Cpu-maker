@@ -113,15 +113,17 @@ const SpeechBubble: React.FC<Page> = ({ atual, choices, resultado }) => {
 
   return (
     <div className={`speech-bubble-container ${atual === 6 ? "end" : ""}`}>
+    <div className={`personagem ${atual === 6 ? "end" : ""}`}>
+
       {/* Balão de fala */}
       <div className={`speech-bubble-wrapper ${atual === 6 ? "end" : ""}`}>
         <div className="speech-bubble">
-        <div className="batata">
+        <div className={`batata ${atual === 6 ? "end" : ""}`}>
             <p>
               {atual === 6 && resultadoVisivel
                 ? `${text}${loadingDots}` // Adiciona os pontos diretamente ao final do texto
                 : text.split("\n").map((line, index) => (
-                    <span key={index}>
+                  <span key={index}>
                       {line.split(/(\*\*.*?\*\*)/g).map((segment, i) =>
                         segment.startsWith("**") && segment.endsWith("**") ? (
                           <b key={i}>{segment.slice(2, -2)}</b>
@@ -140,7 +142,7 @@ const SpeechBubble: React.FC<Page> = ({ atual, choices, resultado }) => {
           className={`info-circle ${explicado ? "visible" : ""}`}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
-        >
+          >
           ?
           {showTooltip && (
             <div className={`tooltip ${showTooltip ? "visible" : ""}`}>
@@ -152,6 +154,7 @@ const SpeechBubble: React.FC<Page> = ({ atual, choices, resultado }) => {
 
       {/* Imagem do personagem */}
       <img src={bmo} alt="Personagem" className="character-image" />
+    </div>
     </div>
   );
 };

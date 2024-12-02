@@ -3,9 +3,12 @@
     justify-content: space-around;
     width: 100%;
     margin-top: auto;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
   .button {
+    font-family: 'Nerko One',Arial, sans-serif;
     position: relative;
     padding: 10px;
     font-size: 1.2vw;
@@ -42,5 +45,12 @@
   
   .circle.active {
     background-color: #587F67;
+  }
+
+
+  @media (max-width: 768px) {
+    .button{
+      font-size: 4vw;
+    }
   }
   

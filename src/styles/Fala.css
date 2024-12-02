@@ -10,33 +10,45 @@
     overflow: hidden;
   }
 
-    .speech-bubble-container.end {
-      align-items: flex-end;
+    .personagem{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: end;
+      max-height: 40vh;
+      margin-bottom: 12vh;
     }
-  
 
+    .personagem.end{
+      max-height: 55vh;
+    }
 
   /* Balão de fala (acima do personagem) */
   .speech-bubble-wrapper {
     display: flex;
     flex-direction: row;
-    margin-top: -130px;
     margin-left: -20px;
     position: relative;
+    max-height: 40vh;
   }
 
   .speech-bubble-wrapper.end {
-    margin-bottom: 12vh;
+    max-height: 55vh;
   }
 
 .batata{
    overflow-y: auto;
    margin: 10px;
    max-width: 36vw;
-   max-height: 50vh;
+   max-height: 36vh;
    width: auto;
    height: auto;
+   scroll-behavior: smooth; 
 }
+
+.batata.end{
+  max-height: 50vh;
+}
+ 
   
 /* Balão de fala (acima do personagem) */
 .speech-bubble {
@@ -44,7 +56,7 @@
   padding: 1px 20px 1px 20px;
   border-radius: 40px;
   position: relative;
-  font-family: Arial, sans-serif;
+  font-family: 'Nerko One',Arial, sans-serif;
   font-size: 1.2vw;
   color: #4A6654;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,6 +70,8 @@
   max-height: calc(100vh * 0.6); /* Altura máxima do balão */
   z-index: 3;
 }
+
+
 .batata::-webkit-scrollbar {
   width: 8px; /* Largura da barra de rolagem */
 }
@@ -68,7 +82,7 @@
 }
 
 .batata::-webkit-scrollbar-thumb {
-  background: #445e4e; /* Cor da "polegar" (parte que o usuário arrasta) */
+  background: #779f86; /* Cor da "polegar" (parte que o usuário arrasta) */
   border-radius: 10px; /* Bordas arredondadas para a parte do "polegar" */
 }
 
@@ -76,25 +90,12 @@
   background:  #314037; /* Cor do "polegar" quando o usuário passa o mouse sobre a barra */
 }
   
-/* Triângulo do balão (Losango achatado com borda apenas na parte externa) */
-.speech-triangle {
-    position: absolute;
-    bottom: -10px; /* Ajuste a posição vertical */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-400%) rotate(-25deg); /* Rotaciona para criar a forma de losango */
-    width: 30px; /* Aumenta a largura para alongar o triângulo */
-    height: 15px; /* Reduz a altura para achatá-lo */
-    background-color: #ABD2B9; /* Cor do triângulo */
-    border-left: 2px solid #314037;
-    border-bottom: 2px solid #314037;
-    z-index: 1;
-  }
-  
   /* Imagem do personagem */
   .character-image {
     width: 120px;
     height: auto;
     z-index: 2;
+    margin-bottom: -12vh;
   }
   
   /* Círculo com interatividade */
@@ -103,7 +104,7 @@
     height: 15px;
     background-color: #ABD2B9;
     color: #4A6654;
-    font-size: 12px;
+    font-size: 1.2vw;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -134,12 +135,71 @@
     color: white;
     padding: 10px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 1.2vw;
     white-space: nowrap;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 5;
   }
 
     .tooltip.visible {
       visibility: visible;
       opacity: 1;
     }
+
+    
+    @media (max-width: 768px) {
+      .batata{
+        margin: 10px;
+        max-width: 95%;
+        max-height: 95%;
+     }
+
+     .batata.end{
+      max-height: 40vh;
+    }
+
+      .speech-bubble {
+        font-size: 3.5vw; 
+        max-width: 100%; 
+        max-height: 570vh; 
+        padding: 1px 6px 1px 6px;
+      }
+
+      .speech-bubble.end {
+        max-height: 50vh;
+      }
+
+      .personagem{
+        max-height: auto;
+        margin-bottom: 6vh;
+      }
+
+      .personagem.end{
+        max-height: 50vh;
+        margin-bottom: 6vh;
+      }
+
+
+      .character-image {
+        width: 80px;
+        margin-bottom: -6vh;
+      }
+    
+      .info-circle {
+        width: 16px;
+        height: 16px;
+        font-size: 3.5vw;
+      }
+    
+      .tooltip {
+        font-size: 3.5vw;
+        position: absolute;
+        top: -45px;
+        transform: translateX(-90%);
+        word-wrap: break-word; 
+        text-align: center;
+        white-space: pre-line;
+        width: 1000%;
+      }
+    }
+    
