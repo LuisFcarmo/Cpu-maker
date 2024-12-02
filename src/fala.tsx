@@ -71,7 +71,6 @@ const SpeechBubble: React.FC<Page> = ({ atual, choices, resultado }) => {
   useEffect(() => {
     if (atual === 6 || !visitado.includes(atual)) {
       if (atual === 6) frase = resultado;
-      console.log(atual);
       let index = 0;
       const maxIndex = frase.length;
 
