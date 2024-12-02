@@ -1,7 +1,7 @@
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-const url = `${import.meta.env.VITE_URL}?key=${API_KEY}`;
-
+const url = `${import.meta.env.VITE_URL}${API_KEY}`;
+console.log(url)
 export const QuerryRecomendation = async (question:string) => {
     const prompt = {
         contents: [{
