@@ -1,5 +1,6 @@
-const API_KEY = 'AIzaSyBU-9htejytr6bEYP5U0mVOmNxJZw8VdYw';
-const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=' + API_KEY;
+
+const API_KEY = import.meta.env.VITE_API_KEY;
+const url = `${import.meta.env.VITE_URL}?key=${API_KEY}`;
 
 export const QuerryRecomendation = async (question:string) => {
     const prompt = {
