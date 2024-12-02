@@ -18,7 +18,5 @@ export default async function tratamento(choices:string[]) {
 
     const resposta_recomendacao = recomendacao.candidates[0].content.parts[0].text;
 
-    console.log(`Resposta de Recomendação: ${resposta_recomendacao}`);
-
     return resposta_recomendacao;
 }
