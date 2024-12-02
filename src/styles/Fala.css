@@ -1,0 +1,145 @@
+/* Container principal */
+.speech-bubble-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end; 
+    background-color: #c5e2d0; /* Fundo semelhante ao da imagem */
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+    .speech-bubble-container.end {
+      align-items: flex-end;
+    }
+  
+
+
+  /* Balão de fala (acima do personagem) */
+  .speech-bubble-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: -130px;
+    margin-left: -20px;
+    position: relative;
+  }
+
+  .speech-bubble-wrapper.end {
+    margin-bottom: 12vh;
+  }
+
+.batata{
+   overflow-y: auto;
+   margin: 10px;
+   max-width: 36vw;
+   max-height: 50vh;
+   width: auto;
+   height: auto;
+}
+  
+/* Balão de fala (acima do personagem) */
+.speech-bubble {
+  background-color: #ABD2B9;
+  padding: 1px 20px 1px 20px;
+  border-radius: 40px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 1.2vw;
+  color: #4A6654;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  border: 2px solid #314037;
+  max-width: calc(100vw * 0.4); /* Garante que o balão não ultrapasse 90% da largura do container */
+  word-wrap: break-word; /* Permite que o texto quebre para se ajustar ao balão */
+  text-align: left;
+  white-space: pre-line; /* Respeita as quebras de linha */
+  max-height: calc(100vh * 0.6); /* Altura máxima do balão */
+  z-index: 3;
+}
+.batata::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+.batata::-webkit-scrollbar-track {
+  background: #a3c5af; /* Cor do fundo da trilha do scroll */
+  border-radius: 10px; /* Bordas arredondadas para a trilha */
+}
+
+.batata::-webkit-scrollbar-thumb {
+  background: #445e4e; /* Cor da "polegar" (parte que o usuário arrasta) */
+  border-radius: 10px; /* Bordas arredondadas para a parte do "polegar" */
+}
+
+.batata::-webkit-scrollbar-thumb:hover {
+  background:  #314037; /* Cor do "polegar" quando o usuário passa o mouse sobre a barra */
+}
+  
+/* Triângulo do balão (Losango achatado com borda apenas na parte externa) */
+.speech-triangle {
+    position: absolute;
+    bottom: -10px; /* Ajuste a posição vertical */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-400%) rotate(-25deg); /* Rotaciona para criar a forma de losango */
+    width: 30px; /* Aumenta a largura para alongar o triângulo */
+    height: 15px; /* Reduz a altura para achatá-lo */
+    background-color: #ABD2B9; /* Cor do triângulo */
+    border-left: 2px solid #314037;
+    border-bottom: 2px solid #314037;
+    z-index: 1;
+  }
+  
+  /* Imagem do personagem */
+  .character-image {
+    width: 120px;
+    height: auto;
+    z-index: 2;
+  }
+  
+  /* Círculo com interatividade */
+  .info-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #ABD2B9;
+    color: #4A6654;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+    margin-left: -6px;
+    position: relative;
+    border: 2px solid #314037;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+
+  .info-circle.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Tooltip exibida ao passar o mouse */
+  .tooltip {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5f7a69;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+    .tooltip.visible {
+      visibility: visible;
+      opacity: 1;
+    }

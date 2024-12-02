@@ -1,0 +1,97 @@
+/* Estilos gerais do carrossel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Para posicionar as setas */
+  background-color: #c5e2d0; /* Cor de fundo */
+  padding: 20px; /* Ajuste do espaçamento interno */
+  border-radius: 25px;
+}
+
+/* Botões de navegação (setas) */
+.arrow {
+  font-size: 52px; /* Tamanho do texto `>` */
+  color: #5f7a69; /* Cor do texto */
+  background: none; /* Remove o fundo padrão */
+  border: none; /* Remove bordas padrão */
+  cursor: pointer;
+  height: auto; /* Ajusta a altura ao conteúdo */
+  width: auto; /* Garante que o botão tenha apenas o tamanho do texto */
+  position: absolute; /* Para posicionamento nas bordas */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centralização */
+}
+
+.arrow:hover,
+.arrow:focus {
+  outline: none; /* Remove o estilo de foco padrão */
+  background: none; /* Remove qualquer fundo azul ao clicar */
+}
+
+.arrow.left {
+  left: 10px; /* Posiciona a seta esquerda */
+}
+
+.arrow.right {
+  right: 10px; /* Posiciona a seta direita */
+}
+
+/* Indicadores de slide (pontinhos) */
+.dots {
+  display: flex;
+  gap: 10px;
+  border: none; /* Remove a borda para centralização visual */
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #94b9a2; /* Cor dos pontos */
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  border: 1px solid #314037;
+}
+
+.dot.active {
+  background-color: #5f7a69; /* Cor do ponto ativo */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 40px; /* Diminui o tamanho das setas */
+  }
+
+  .dot {
+    width: 16px; /* Reduz os indicadores */
+    height: 16px;
+  }
+
+  .dots {
+    gap: 8px; /* Ajuste do espaçamento entre os indicadores */
+  }
+
+  .carousel {
+    padding: 15px; /* Menos padding para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .arrow {
+    font-size: 32px; /* Ainda menor para telas muito pequenas */
+  }
+
+  .dot {
+    width: 12px; /* Indicadores ainda menores */
+    height: 12px;
+  }
+
+  .dots {
+    gap: 6px; /* Menor espaçamento entre os indicadores */
+  }
+
+  .carousel {
+    padding: 10px; /* Mais compacto */
+  }
+}
