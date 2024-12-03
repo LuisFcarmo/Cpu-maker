@@ -87,7 +87,7 @@ const SpeechBubble: React.FC<Page> = ({ atual, choices, resultado }) => {
         if (index >= maxIndex) {
           clearInterval(interval);
         }
-      }, 50);
+      }, 70);
 
       return () => clearInterval(interval);
     } else {
