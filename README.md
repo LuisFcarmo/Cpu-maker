@@ -36,4 +36,5 @@ Certifique-se de ter instalado em sua máquina:
    npm i
    npm run dev
    
-
+#Obs
+para utilizar o sistema localmente você mesmo deve criar sua chave de Api key no serviço do gemini
