@@ -1,6 +1,6 @@
 # CPU Maker
 
-![Screenshot from 2024-12-03 22-26-08](https://github.com/user-attachments/assets/053092c1-44c6-4d53-8720-67b82ecc8cde)
+![Screenshot from 2024-12-03 22-27-54](https://github.com/user-attachments/assets/bcda3b35-5890-45d7-b644-e18d1ce0b224)
 
 **CPU Maker** é um chatbot desenvolvido para auxiliar usuários na escolha de componentes de hardware, oferecendo recomendações personalizadas de CPUs e instruções detalhadas sobre como montar uma máquina personalizada.
 
