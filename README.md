@@ -1,5 +1,7 @@
 # CPU Maker
 
+![Screenshot from 2024-12-03 22-26-08](https://github.com/user-attachments/assets/053092c1-44c6-4d53-8720-67b82ecc8cde)
+
 **CPU Maker** é um chatbot desenvolvido para auxiliar usuários na escolha de componentes de hardware, oferecendo recomendações personalizadas de CPUs e instruções detalhadas sobre como montar uma máquina personalizada.
 
 Acesse o chatbot em [cpu-maker.vercel.app](https://cpu-maker.vercel.app/).
